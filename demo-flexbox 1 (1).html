@@ -1,0 +1,137 @@
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.red{
+    background: red;
+}
+
+
+.yellow{
+    background: yellow;
+}
+
+
+.blue{
+    background: blue;
+}
+
+
+.green{
+    background: green;
+}
+
+section{
+    width: 100%;
+    height: auto;
+    padding: 40px;
+}
+
+.container{
+    width: 100%;
+    max-width: 1265px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px;
+}
+.container .column:nth-child(1){
+    width: calc(60% - (80px / 3));
+}
+.container .column:nth-child(2),
+.container .column:nth-child(3){
+    width: calc(20% - (80px / 3));
+}
+
+/* col 2 */
+.container .column:nth-child(2){
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+.container .column:nth-child(2) ul {
+    list-style: none ;
+}
+
+.container .column:nth-child(2) ul li {
+    padding: 10px 0;
+}
+
+.container .column:nth-child(2) ul li a{
+    text-decoration: none;
+    color: rgba(255,255,255,0.8);
+}
+
+.container .column:nth-child(2) ul li a:hover{
+    color: rgba(255,255,255,1);
+}
+
+/* col 3 */
+.container .column:nth-child(3){
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+/* Tablet */
+@media(max-width: 1132px){
+    /* col 1 */
+    .container .column:nth-child(1){
+        width: 100%;
+    }
+
+    .container .column:nth-child(2),
+    .container .column:nth-child(3){
+        width: calc(50% - 40px);
+    }
+
+    .container .column:nth-child(3){
+        justify-content: normal;
+    }
+}
+/* Móvil */
+@media(max-width: 768px){
+    /* col 1 */
+    .container .column:nth-child(1),
+    .container .column:nth-child(2),
+    .container .column:nth-child(3){
+        width: 100%;
+    }
+}
+
+</style>
+
+<section class="yellow">
+    <div class="container red">
+        <div class="column blue">
+            <h2>Mi título Mi título Mi título Mi título Mi título Mi título Mi título Mi título</h2>
+            <p>Mi texto Mi texto Mi texto Mi texto Mi texto Mi texto Mi texto Mi texto Mi texto Mi texto Mi texto Mi texto Mi texto Mi texto Mi texto Mi texto Mi texto Mi texto </p>
+        </div>
+        <div class="column green">
+            <ul>
+                <li>
+                    <a href="#">Enlace 1</a>
+                </li>
+                <li>
+                    <a href="#">Enlace 2</a>
+                </li>
+                <li>
+                    <a href="#">Enlace 3</a>
+                </li>
+            </ul>
+        </div>
+        <div class="column yellow">
+            <img src="https://www.bigmat.es/Content/V2/img/svg/bigmat/logo/logotipo-big-mat-international-architecture-award.svg" />
+            <img src="https://www.bigmat.es/Content/V2/img/svg/bigmat/logo/logotipo-big-mat-international-architecture-award.svg" />
+            <img src="https://www.bigmat.es/Content/V2/img/svg/bigmat/logo/logotipo-big-mat-international-architecture-award.svg" />
+            <img src="https://www.bigmat.es/Content/V2/img/svg/bigmat/logo/logotipo-big-mat-international-architecture-award.svg" />
+            <img src="https://www.bigmat.es/Content/V2/img/svg/bigmat/logo/logotipo-big-mat-international-architecture-award.svg" />
+            <img src="https://www.bigmat.es/Content/V2/img/svg/bigmat/logo/logotipo-big-mat-international-architecture-award.svg" />
+        </div>
+    </div>
+</section>
